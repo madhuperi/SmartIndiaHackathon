@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Socio-Economic Caste Census-2011</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="no-cache">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+<link href="css/reportlist/reportLayout.css" rel="stylesheet" type="text/css" />
+<link href="css/dataTable/buttons.dataTables.min.css" rel="stylesheet" type="text/css" />
+<link href="css/dataTable/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+<link href="css/fonts/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="css/dataTable/fixedColumns.dataTables.min.css" rel="stylesheet" type="text/css" />
+
+
+<script src="script/dataTable/jquery-1.12.0.min.js"></script>
+<script src="script/dataTable/jquery.dataTables.min.js"></script>
+<script src="js/js/highchart/highcharts.js"></script>
+<script src="script/dataTable/jszip.min.js"></script>
+<script src="script/dataTable/pdfmake.min.js"></script>
+<script src="script/dataTable/vfs_fonts.js"></script>
+<script src="script/dataTable/buttons.html5.min.js"></script>
+<script src="script/dataTable/buttons.print.min.js"></script>
+<script src="script/dataTable/dataTables.buttons.min.js"></script>
+<script src="script/dataTable/dataTables.fixedColumns.js"></script>
+
+</head>
+<body>
+	<div id="mainwrapper">
+		<!--header-->
+		<div>
+			
+	<div>
+		<div id="header"></div>
+		<div class="nav_pn_index" style="margin: 0%;height: 15px;background-color:#EAEAEA;width: 99.5%;" >
+			<div class="nav_index">
+				<ul style="margin-right: 10px;padding-top: 5px;padding-top: 5px;float: right;" >
+					<li><a href="aboutusReport">About us</a></li>
+					<li><a href="feedbackFormReport">Feedback</a></li>
+					<li><a href="contactusReport">Contact us</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+		</div>
+		<!--Body-->
+		<div>
+			
+
+
+<link href="css/reportlist/reportTable.css" rel="stylesheet" type="text/css" />
+<script>
+
+	function selectAllIndia(reportType,actionName)
+	{
+		$("#reportType").val(reportType);
+		$('#statewiseCategorywiseReportForm').attr('action', actionName);
+		$('#statewiseCategorywiseReportForm').attr('method', 'post');
+		$('#statewiseCategorywiseReportForm').submit();
+	}
+
+	function selectState(stateCode,stateName,reportType,actionName)
+	{
+		$("#stateCode").val(stateCode);
+		$("#stateName").val(stateName);
+		$("#reportType").val(reportType);
+		$('#statewiseCategorywiseReportForm').attr('action', actionName);
+		$('#statewiseCategorywiseReportForm').attr('method', 'post');
+		$('#statewiseCategorywiseReportForm').submit();
+	}
+
+	
+	function selectDistrict(stateCode,stateName,districtCode,districtName,reportType,actionName)
+	{
+		$("#stateCode").val(stateCode);
+		$("#stateName").val(stateName);
+		$("#districtCode").val(districtCode);
+		$("#districtName").val(districtName);
+		$("#reportType").val(reportType);
+		$('#statewiseCategorywiseReportForm').attr('action', actionName);
+		$('#statewiseCategorywiseReportForm').attr('method', 'post');
+		$('#statewiseCategorywiseReportForm').submit();
+	}
+
+
+</script>
+<form name="statewiseCategorywiseReportForm" id="statewiseCategorywiseReportForm">
+
+	<input type="hidden" id="stateCode" name="stateCode">
+	<input type="hidden" id="stateName" name="stateName">
+	<input type="hidden" id="districtCode" name="districtCode">
+	<input type="hidden" id="districtName" name="districtName">
+	<input type="hidden" id="reportType" name="reportType">
+	<input type="hidden" id="reportName" name="reportName">
+<div id="container" >
+
+	<!-- start  Div Tabs Purpose-->
+		<div class="nav_pn">
+			<div class="nav">
+			<ul>
+				<li id="home"><a href="welcome">Home</a></li>
+		        				
+				<li><a href="stateSummaryReport">Summary</a></li>
+				<li><a href="#">Statewise &amp; Zonewise &#9662;</a>
+		            <ul>
+		                <li><a href="statewiseSeccDataSummaryReport?reportType=SECC Data Summary">SECC Data Summary</a>
+<!-- 			                <ul>
+			                    <li><a href="statewiseSeccDataSummaryReport?reportType=SECC Data Summary">Main</a></li>
+			                    <li><a href="state-zone-categorywise-report?getReportId=S_2">Descending</a></li>
+			                </ul> -->
+		                </li>
+		                <li><a href="statewiseTypeOfHouseholdsReport?reportType=Type of Households">Type of Households</a>
+<!-- 			                <ul>
+			                    <li><a href="statewiseTypeOfHouseholdsReport?reportType=Type of Households">Main</a></li>
+			                    <li><a href="state-zone-categorywise-report?getReportId=S_5">Descending</a></li>
+			                </ul> -->
+		                </li>
+		                <li><a href="statewiseGenderProfileReport?reportType=Gender Profile">Gender Profile (Rural)</a>
+<!-- 			                <ul>
+			                    <li><a href="statewiseGenderProfileReport?reportType=Gender Profile ">Main</a></li>
+			                    <li><a href="state-zone-categorywise-report?getReportId=S_7">Descending</a></li>
+			                </ul> -->
+		                </li>
+		                <li><a href="statewiseEducationProfileReport?reportType=Education Profile">Education Profile (Rural)</a>
+<!-- 			                <ul>
+			                    <li><a href="statewiseEducationProfileReport?reportType=Education Profile">Main</a></li>
+			                    <li><a href="state-zone-categorywise-report?getReportId=S_9">Descending</a></li>
+			                </ul> -->
+		                </li>
+		                <li><a href="statewiseDisabilityProfileReport?reportType=Disability Profile">Disability Profile (Rural)</a>
+<!-- 			                <ul>
+			                    <li><a href="statewiseDisabilityProfileReport?reportType=Disability Profile">Main</a></li>
+			                    <li><a href="state-zone-categorywise-report?getReportId=S_11">Descending</a></li>
+			                </ul> -->
+		                </li>
+		                <li><a href="statewiseCasteProfileReport?reportType=Caste Profile">Caste Profile (Rural)</a>
+<!-- 			                <ul>
+			                    <li><a href="statewiseCasteProfileReport?reportType=Caste Profile">Main</a></li>
+			                    <li><a href="state-zone-categorywise-report?getReportId=S_13">Descending</a></li>
+			                </ul> -->
+		                </li>
+		                <li><a href="statewiseHousingDwellingWallTypeReport?reportType=Housing Dwelling Wall Type">Housing Dwelling Wall Type (Rural)</a>
+<!-- 			                <ul>
+			                    <li><a href="statewiseHousingDwellingWallTypeReport?reportType=Housing Dwelling Wall Type">Main</a></li>
+			                    <li><a href="state-zone-categorywise-report?getReportId=S_15">Descending</a></li>
+			                </ul> -->
+		                </li>
+		                  <li><a href="statewiseHousingDwellingRoofTypeReport?reportType=Housing Dwelling roof Type">Housing Dwelling Roof Type (Rural)</a>
+<!-- 			                <ul>
+			                    <li><a href="statewiseHousingDwellingRoofTypeReport?reportType=Housing Dwelling roof Type">Main</a></li>
+			                </ul> -->
+		                </li>
+		                <li><a href="statewisePTGLRBLMSReport?reportType=PTG , LRBL , MS">PTG , LRBL , MS (Rural)</a>
+<!-- 			                <ul>
+			                    <li><a href="statewisePTGLRBLMSReport?reportType=PTG , LRBL , MS">Main</a></li>
+			                    <li><a href="state-zone-categorywise-report?getReportId=S_17">Descending</a></li>
+			                </ul> -->
+		                </li>
+		                <li><a href="statewiseEmploymentAndIncomeReport?reportType=Employment and Income">Employment and Income (Rural)</a>
+<!-- 			                <ul>
+			                    <li><a href="statewiseEmploymentAndIncomeReport?reportType=Employment and Income">Main</a></li>
+			                    <li><a href="state-zone-categorywise-report?getReportId=S_19">Descending</a></li>
+			                </ul> -->
+		                </li>
+		                <li><a href="statewiseMainSourceOfIncomeReport?reportType=Main Source Of Income">Main Source Of Income (Rural)</a>
+<!-- 			                <ul>
+			                    <li><a href="statewiseMainSourceOfIncomeReport?reportType=Main Source Of Income">Main</a></li>
+			                    <li><a href="state-zone-categorywise-report?getReportId=S_21">Descending</a></li>
+			                </ul> -->
+		                </li>
+		                <li><a href="statewiseAssetsOwnershipReport?reportType=Assets Ownership">Assets Ownership (Rural)</a>
+<!-- 			                <ul>
+			                    <li><a href="statewiseAssetsOwnershipReport?reportType=Assets Ownership">Main</a></li>
+			                    <li><a href="state-zone-categorywise-report?getReportId=S_23">Descending</a></li>
+			                </ul> -->
+		                </li>
+ 		                <li><a href="statewiseLandOwnershipReport?reportType=Land Ownership">Land Ownership (Rural)</a>
+<!-- 			                <ul>
+ 			                    <li><a href="statewiseLandOwnershipReport?reportType=Land Ownership">Main</a></li>
+ 			                    <li><a href="state-zone-categorywise-report?getReportId=S_25">Descending</a></li>
+			                </ul> -->
+		                </li>
+		            </ul>
+		        </li>    
+<!-- 				<li><a href="#">Zonewise &#9662;</a>
+		            <ul>
+		                <li><a href="state-zone-categorywise-report?getReportId=Z_1">SECC Data Summary</a></li>
+		                <li><a href="state-zone-categorywise-report?getReportId=Z_3">Type of Households</a></li>
+		                <li><a href="state-zone-categorywise-report?getReportId=Z_4">Gender Profile (Rural)</a></li>
+		                <li><a href="state-zone-categorywise-report?getReportId=Z_5">Education Profile (Rural)</a></li>
+		                <li><a href="state-zone-categorywise-report?getReportId=Z_6">Disability Profile (Rural)</a></li>
+		                <li><a href="state-zone-categorywise-report?getReportId=Z_7">Caste Profile (Rural)</a></li>
+		                <li><a href="state-zone-categorywise-report?getReportId=Z_8">Housing Dwelling Wall Type (Rural)</a></li>
+		                <li><a href="state-zone-categorywise-report?getReportId=Z_9">Housing Dwelling Roof Type (Rural)</a></li>
+		                <li><a href="state-zone-categorywise-report?getReportId=Z_10">PTG , LRBL , MS (Rural)</a></li>
+		                <li><a href="state-zone-categorywise-report?getReportId=Z_11">Employment and Income (Rural)</a></li>
+		                <li><a href="state-zone-categorywise-report?getReportId=Z_12">Main Source Of Income (Rural)</a></li>
+		                <li><a href="state-zone-categorywise-report?getReportId=Z_13">Assets Ownership (Rural)</a></li>
+ 		                <li><a href="state-zone-categorywise-report?getReportId=Z_14">Land Ownership (Rural)</a></li>
+		            </ul>
+		        </li>  -->
+ 		        <li><a href="#">Categorywise &#9662;</a>
+		            <ul>
+		             	<li><a href="#">All Category (Rural)<span class="right-arrow">&#10148; &nbsp;</span></a>
+			                <ul>
+			                     <li><a href="categorywiseIncomeSlabReport?reportType=All Category">Income slab</a></li>
+			                     <li><a href="categorywiseIncomeSourceReport?reportType=All Category">Income source</a></li>
+			                     <li><a href="categorywiseSalariedJobReport?reportType=All Category">Salaried job</a></li>
+			                     <li><a href="categorywiseHouseOwnershipStatusReport?reportType=All Category">House ownership status</a></li>
+			                     <li><a href="categorywiseHouseTypeReport?reportType=All Category">House type</a></li>
+			                     <li><a href="categorywiseExclusionReport?reportType=All Category">Exclusion </a></li>
+			                     <li><a href="categorywiseInclusionReport?reportType=All Category">Inclusion</a></li>
+			                     <li><a href="categorywiseDeprivationReport?reportType=All Category">Deprivation</a></li>
+			                </ul>
+		                </li>
+		                 <li><a href="#">SC Category (Rural)<span class="right-arrow">&#10148; &nbsp;</span></a>
+			                <ul>
+			                    <li><a href="categorywiseIncomeSlabReport?reportType=SC Category">Income slab</a></li>
+			                     <li><a href="categorywiseIncomeSourceReport?reportType=SC Category">Income source</a></li>
+			                     <li><a href="categorywiseSalariedJobReport?reportType=SC Category">Salaried job</a></li>
+			                     <li><a href="categorywiseHouseOwnershipStatusReport?reportType=SC Category">House ownership status</a></li>
+			                     <li><a href="categorywiseHouseTypeReport?reportType=SC Category">House type</a></li>
+			                     <li><a href="categorywiseExclusionReport?reportType=SC Category">Exclusion </a></li>
+			                     <li><a href="categorywiseInclusionReport?reportType=SC Category">Inclusion</a></li>
+			                     <li><a href="categorywiseDeprivationReport?reportType=SC Category">Deprivation</a></li>
+			                </ul>
+		                </li>
+		                 <li><a href="#">ST Category (Rural)<span class="right-arrow">&#10148; &nbsp;</span></a>
+			                <ul>
+			                    <li><a href="categorywiseIncomeSlabReport?reportType=ST Category">Income slab</a></li>
+			                     <li><a href="categorywiseIncomeSourceReport?reportType=ST Category">Income source</a></li>
+			                     <li><a href="categorywiseSalariedJobReport?reportType=ST Category">Salaried job</a></li>
+			                     <li><a href="categorywiseHouseOwnershipStatusReport?reportType=ST Category">House ownership status</a></li>
+			                     <li><a href="categorywiseHouseTypeReport?reportType=ST Category">House type</a></li>
+			                     <li><a href="categorywiseExclusionReport?reportType=ST Category">Exclusion </a></li>
+			                     <li><a href="categorywiseInclusionReport?reportType=ST Category">Inclusion</a></li>
+			                     <li><a href="categorywiseDeprivationReport?reportType=ST Category">Deprivation</a></li>
+			                </ul>
+		                </li>
+		                  <li><a href="#">Other Category (Rural)<span class="right-arrow">&#10148; &nbsp;</span></a>
+			                <ul>
+			                  	 <li><a href="categorywiseIncomeSlabReport?reportType=Other Category">Income slab</a></li>
+			                     <li><a href="categorywiseIncomeSourceReport?reportType=Other Category">Income source</a></li>
+			                     <li><a href="categorywiseSalariedJobReport?reportType=Other Category">Salaried job</a></li>
+			                     <li><a href="categorywiseHouseOwnershipStatusReport?reportType=Other Category">House ownership status</a></li>
+			                     <li><a href="categorywiseHouseTypeReport?reportType=Other Category">House type</a></li>
+			                     <li><a href="categorywiseExclusionReport?reportType=Other Category">Exclusion </a></li>
+			                     <li><a href="categorywiseInclusionReport?reportType=Other Category">Inclusion</a></li>
+			                     <li><a href="categorywiseDeprivationReport?reportType=Other Category">Deprivation</a></li>
+			                </ul>
+		                </li>
+		                 <li><a href="#">Female Headed (Rural)<span class="right-arrow">&#10148; &nbsp;</span></a>
+			                <ul>
+			                    <li><a href="categorywiseIncomeSlabReport?reportType=Female Headed Category">Income slab</a></li>
+			                     <li><a href="categorywiseIncomeSourceReport?reportType=Female Headed Category">Income source</a></li>
+			                     <li><a href="categorywiseSalariedJobReport?reportType=Female Headed Category">Salaried job</a></li>
+			                     <li><a href="categorywiseHouseOwnershipStatusReport?reportType=Female Headed Category">House ownership status</a></li>
+			                     <li><a href="categorywiseHouseTypeReport?reportType=Female Headed Category">House type</a></li>
+			                     <li><a href="categorywiseExclusionReport?reportType=Female Headed Category">Exclusion </a></li>
+			                     <li><a href="categorywiseInclusionReport?reportType=Female Headed Category">Inclusion</a></li>
+			                     <li><a href="categorywiseDeprivationReport?reportType=Female Headed Category">Deprivation</a></li>
+			                </ul>
+		                </li>
+		                 <li><a href="#">Disable Member Household (Rural)<span class="right-arrow">&#10148; &nbsp;</span></a>
+			                <ul>
+			                   <li><a href="categorywiseIncomeSlabReport?reportType=Disable Member Category">Income slab</a></li>
+			                     <li><a href="categorywiseIncomeSourceReport?reportType=Disable Member Category">Income source</a></li>
+			                     <li><a href="categorywiseSalariedJobReport?reportType=Disable Member Category">Salaried job</a></li>
+			                     <li><a href="categorywiseHouseOwnershipStatusReport?reportType=Disable Member Category">House ownership status</a></li>
+			                     <li><a href="categorywiseHouseTypeReport?reportType=Disable Member Category">House type</a></li>
+			                     <li><a href="categorywiseExclusionReport?reportType=Disable Member Category">Exclusion </a></li>
+			                     <li><a href="categorywiseInclusionReport?reportType=Disable Member Category">Inclusion</a></li>
+			                     <li><a href="categorywiseDeprivationReport?reportType=Disable Member Category">Deprivation</a></li>
+			                </ul>
+		                </li>
+		             </ul>
+		        </li>
+<li><a href="#">Questionnaire &#9662;</a>
+	<ul>
+		<li><a href="ruralQuestionnaire">Rural Questionnaire</a></li>
+		<li><a href="urbanQuestionnaire">Urban Questionnaire</a></li>
+	</ul>
+</li>
+<li><a href="reportlistContentUrban">Urban</a></li>   
+			</ul>
+			</div>
+		</div>
+	<!-- End  Div Tabs Purpose-->
+			
+			<table style="width: 100%;">
+				<tr height="15px" style="background-color: #CBDAC3">
+					<td width="100%" align="center" style="padding-bottom: 5px ;padding-top: 5px"></td>
+				</tr>
+			</table>
+			
+			<ul>
+				<li>The reports presented here provide provisional SECC data of Rural India.</li>
+				<li>The data is presented statewise / districtwise as well as zonewise (North, South, East, West, Central, North Eastern, UT). Please click on particular state to view the district wise data.</li>
+			</ul>			
+			
+			<table style="width: 100%;">
+				<tr height="1px" style="background-color: black;">
+					<td width="100%" align="center"></td>
+				</tr>
+			</table>
+			
+			
+				
+
+
+<table style="width: 100%;">
+<tr>
+	<td style="padding-left: 10px;" width="50%" >
+		<label id="label_stateName">State name</label>&nbsp;&nbsp;:-&nbsp;&nbsp;&nbsp;<b><font color="#048738">ANDHRA PRADESH</font></b>
+	</td>
+	<td width="50%px" style="padding-right: 12px;" align="right">
+		<a id="backLink" href="#" onclick="selectAllIndia(&quot;SECC Data Summary&quot;,&quot;statewiseSeccDataSummaryReport&quot;)">Back</a>
+	</td>
+</tr>
+</table>
+
+
+<div align="center" style="font-weight: bold; background-color: #CBDAC3; font-size: 16px;" id="xlsTitle">
+SECC 2011 At A Glance
+</div>
+<table id="example" class="display" style="width: 100%; border-color: #33B679;" border="1">
+<thead>
+<tr align='center'>
+
+
+	<th>Code with <br/>District Name</th>
+
+
+
+<th>Total<br/> household</th>
+
+
+	<th>Number of<br/> Districts</th>
+
+
+<th>Number<br/> of <br/>Tehsils</th>
+<th>Number<br/> of <br/>Gram Panchayat /<br/> Police Station</th>
+<th>Number<br/> of <br/>Villages Rural</th>
+<th>Number<br/> of <br/>Towns Urban</th>
+<th>Total<br/> Number<br/> of Households<br/> Rural</th>
+<th>Total<br/> Number<br/> of Households<br/> Urban</th>
+<th>% of<br/> Households<br/> in Rural</th>
+<th>% of<br/> Households<br/> in Urban</th>
+</tr>
+</thead>
+<tbody>
+
+
+	<tr>
+		
+		
+			<td align="left"  style="width:15%">
+				
+				
+					All India
+				
+			</td>
+				
+				
+		<td>244921278</td>
+		
+		<td>640</td>
+		
+		<td>5989</td>
+		<td>300773</td>
+		<td>644648</td>
+		<td>4460</td>
+		<td>179787342</td>
+		<td>65133936</td>
+		<td>73.41%</td>
+		<td>26.59%</td>
+	</tr>
+	
+
+	<tr>
+		
+		
+			<td align="left"  style="width:15%">
+				
+				
+					South Total
+				
+			</td>
+				
+				
+		<td>58874180</td>
+		
+		<td>99</td>
+		
+		<td>1588</td>
+		<td>42450</td>
+		<td>75330</td>
+		<td>1302</td>
+		<td>39443917</td>
+		<td>19430263</td>
+		<td>67.00%</td>
+		<td>33.00%</td>
+	</tr>
+	
+
+	<tr>
+		
+		
+			<td align="left"  style="width:15%">
+				
+				
+					State Total
+				
+			</td>
+				
+				
+		<td>12270164</td>
+		
+		<td>13</td>
+		
+		<td>670</td>
+		<td>13180</td>
+		<td>17521</td>
+		<td>94</td>
+		<td>9344180</td>
+		<td>2925984</td>
+		<td>76.15%</td>
+		<td>23.85%</td>
+	</tr>
+	
+
+	<tr>
+		
+		
+			<td align="left"  style="width:15%">
+				
+		 				
+						
+							11&nbsp;-&nbsp;<a href="#" onclick="selectDistrict(&quot;28&quot;,&quot;ANDHRA PRADESH&quot;,&quot;11&quot;,&quot;Srikakulam&quot;,&quot;SECC Data Summary&quot;,&quot;statewiseTehsilSeccDataSummaryReport&quot;)">Srikakulam</a>
+						
+		 		
+				
+			</td>
+				
+				
+		<td>627932</td>
+		
+		<td>1</td>
+		
+		<td>38</td>
+		<td>1025</td>
+		<td>1811</td>
+		<td>5</td>
+		<td>558929</td>
+		<td>69003</td>
+		<td>89.01%</td>
+		<td>10.99%</td>
+	</tr>
+	
+
+	<tr>
+		
+		
+			<td align="left"  style="width:15%">
+				
+		 				
+						
+							12&nbsp;-&nbsp;<a href="#" onclick="selectDistrict(&quot;28&quot;,&quot;ANDHRA PRADESH&quot;,&quot;12&quot;,&quot;Vizianagaram&quot;,&quot;SECC Data Summary&quot;,&quot;statewiseTehsilSeccDataSummaryReport&quot;)">Vizianagaram</a>
+						
+		 		
+				
+			</td>
+				
+				
+		<td>568752</td>
+		
+		<td>1</td>
+		
+		<td>34</td>
+		<td>929</td>
+		<td>1531</td>
+		<td>4</td>
+		<td>478978</td>
+		<td>89774</td>
+		<td>84.22%</td>
+		<td>15.78%</td>
+	</tr>
+	
+
+	<tr>
+		
+		
+			<td align="left"  style="width:15%">
+				
+		 				
+						
+							13&nbsp;-&nbsp;<a href="#" onclick="selectDistrict(&quot;28&quot;,&quot;ANDHRA PRADESH&quot;,&quot;13&quot;,&quot;Visakhapatnam&quot;,&quot;SECC Data Summary&quot;,&quot;statewiseTehsilSeccDataSummaryReport&quot;)">Visakhapatnam</a>
+						
+		 		
+				
+			</td>
+				
+				
+		<td>1095993</td>
+		
+		<td>1</td>
+		
+		<td>43</td>
+		<td>1011</td>
+		<td>3278</td>
+		<td>9</td>
+		<td>602256</td>
+		<td>493737</td>
+		<td>54.95%</td>
+		<td>45.05%</td>
+	</tr>
+	
+
+	<tr>
+		
+		
+			<td align="left"  style="width:15%">
+				
+		 				
+						
+							14&nbsp;-&nbsp;<a href="#" onclick="selectDistrict(&quot;28&quot;,&quot;ANDHRA PRADESH&quot;,&quot;14&quot;,&quot;EastGodavari&quot;,&quot;SECC Data Summary&quot;,&quot;statewiseTehsilSeccDataSummaryReport&quot;)">EastGodavari</a>
+						
+		 		
+				
+			</td>
+				
+				
+		<td>1426869</td>
+		
+		<td>1</td>
+		
+		<td>64</td>
+		<td>1180</td>
+		<td>1668</td>
+		<td>9</td>
+		<td>1176639</td>
+		<td>250230</td>
+		<td>82.46%</td>
+		<td>17.54%</td>
+	</tr>
+	
+
+	<tr>
+		
+		
+			<td align="left"  style="width:15%">
+				
+		 				
+						
+							15&nbsp;-&nbsp;<a href="#" onclick="selectDistrict(&quot;28&quot;,&quot;ANDHRA PRADESH&quot;,&quot;15&quot;,&quot;WestGodavari&quot;,&quot;SECC Data Summary&quot;,&quot;statewiseTehsilSeccDataSummaryReport&quot;)">WestGodavari</a>
+						
+		 		
+				
+			</td>
+				
+				
+		<td>1061697</td>
+		
+		<td>1</td>
+		
+		<td>48</td>
+		<td>952</td>
+		<td>938</td>
+		<td>8</td>
+		<td>881322</td>
+		<td>180375</td>
+		<td>83.01%</td>
+		<td>16.99%</td>
+	</tr>
+	
+
+	<tr>
+		
+		
+			<td align="left"  style="width:15%">
+				
+		 				
+						
+							16&nbsp;-&nbsp;<a href="#" onclick="selectDistrict(&quot;28&quot;,&quot;ANDHRA PRADESH&quot;,&quot;16&quot;,&quot;Krishna&quot;,&quot;SECC Data Summary&quot;,&quot;statewiseTehsilSeccDataSummaryReport&quot;)">Krishna</a>
+						
+		 		
+				
+			</td>
+				
+				
+		<td>1248718</td>
+		
+		<td>1</td>
+		
+		<td>50</td>
+		<td>1026</td>
+		<td>981</td>
+		<td>7</td>
+		<td>852522</td>
+		<td>396196</td>
+		<td>68.27%</td>
+		<td>31.73%</td>
+	</tr>
+	
+
+	<tr>
+		
+		
+			<td align="left"  style="width:15%">
+				
+		 				
+						
+							17&nbsp;-&nbsp;<a href="#" onclick="selectDistrict(&quot;28&quot;,&quot;ANDHRA PRADESH&quot;,&quot;17&quot;,&quot;Guntur&quot;,&quot;SECC Data Summary&quot;,&quot;statewiseTehsilSeccDataSummaryReport&quot;)">Guntur</a>
+						
+		 		
+				
+			</td>
+				
+				
+		<td>1234988</td>
+		
+		<td>1</td>
+		
+		<td>57</td>
+		<td>1020</td>
+		<td>718</td>
+		<td>13</td>
+		<td>862356</td>
+		<td>372632</td>
+		<td>69.83%</td>
+		<td>30.17%</td>
+	</tr>
+	
+
+	<tr>
+		
+		
+			<td align="left"  style="width:15%">
+				
+		 				
+						
+							18&nbsp;-&nbsp;<a href="#" onclick="selectDistrict(&quot;28&quot;,&quot;ANDHRA PRADESH&quot;,&quot;18&quot;,&quot;Prakasam&quot;,&quot;SECC Data Summary&quot;,&quot;statewiseTehsilSeccDataSummaryReport&quot;)">Prakasam</a>
+						
+		 		
+				
+			</td>
+				
+				
+		<td>794133</td>
+		
+		<td>1</td>
+		
+		<td>56</td>
+		<td>1058</td>
+		<td>1093</td>
+		<td>4</td>
+		<td>701745</td>
+		<td>92388</td>
+		<td>88.37%</td>
+		<td>11.63%</td>
+	</tr>
+	
+
+	<tr>
+		
+		
+			<td align="left"  style="width:15%">
+				
+		 				
+						
+							19&nbsp;-&nbsp;<a href="#" onclick="selectDistrict(&quot;28&quot;,&quot;ANDHRA PRADESH&quot;,&quot;19&quot;,&quot;SriPottiSriramuluNellore&quot;,&quot;SECC Data Summary&quot;,&quot;statewiseTehsilSeccDataSummaryReport&quot;)">SriPottiSriramuluNellore</a>
+						
+		 		
+				
+			</td>
+				
+				
+		<td>748411</td>
+		
+		<td>1</td>
+		
+		<td>46</td>
+		<td>980</td>
+		<td>1188</td>
+		<td>4</td>
+		<td>590457</td>
+		<td>157954</td>
+		<td>78.89%</td>
+		<td>21.11%</td>
+	</tr>
+	
+
+	<tr>
+		
+		
+			<td align="left"  style="width:15%">
+				
+		 				
+						
+							20&nbsp;-&nbsp;<a href="#" onclick="selectDistrict(&quot;28&quot;,&quot;ANDHRA PRADESH&quot;,&quot;20&quot;,&quot;YSR&quot;,&quot;SECC Data Summary&quot;,&quot;statewiseTehsilSeccDataSummaryReport&quot;)">YSR</a>
+						
+		 		
+				
+			</td>
+				
+				
+		<td>700673</td>
+		
+		<td>1</td>
+		
+		<td>51</td>
+		<td>650</td>
+		<td>934</td>
+		<td>10</td>
+		<td>516185</td>
+		<td>184488</td>
+		<td>73.67%</td>
+		<td>26.33%</td>
+	</tr>
+	
+
+	<tr>
+		
+		
+			<td align="left"  style="width:15%">
+				
+		 				
+						
+							21&nbsp;-&nbsp;<a href="#" onclick="selectDistrict(&quot;28&quot;,&quot;ANDHRA PRADESH&quot;,&quot;21&quot;,&quot;Kurnool&quot;,&quot;SECC Data Summary&quot;,&quot;statewiseTehsilSeccDataSummaryReport&quot;)">Kurnool</a>
+						
+		 		
+				
+			</td>
+				
+				
+		<td>836394</td>
+		
+		<td>1</td>
+		
+		<td>54</td>
+		<td>911</td>
+		<td>909</td>
+		<td>6</td>
+		<td>637178</td>
+		<td>199216</td>
+		<td>76.18%</td>
+		<td>23.82%</td>
+	</tr>
+	
+
+	<tr>
+		
+		
+			<td align="left"  style="width:15%">
+				
+		 				
+						
+							22&nbsp;-&nbsp;<a href="#" onclick="selectDistrict(&quot;28&quot;,&quot;ANDHRA PRADESH&quot;,&quot;22&quot;,&quot;Anantapur&quot;,&quot;SECC Data Summary&quot;,&quot;statewiseTehsilSeccDataSummaryReport&quot;)">Anantapur</a>
+						
+		 		
+				
+			</td>
+				
+				
+		<td>886908</td>
+		
+		<td>1</td>
+		
+		<td>63</td>
+		<td>1005</td>
+		<td>959</td>
+		<td>7</td>
+		<td>686743</td>
+		<td>200165</td>
+		<td>77.43%</td>
+		<td>22.57%</td>
+	</tr>
+	
+
+	<tr>
+		
+		
+			<td align="left"  style="width:15%">
+				
+		 				
+						
+							23&nbsp;-&nbsp;<a href="#" onclick="selectDistrict(&quot;28&quot;,&quot;ANDHRA PRADESH&quot;,&quot;23&quot;,&quot;Chittoor&quot;,&quot;SECC Data Summary&quot;,&quot;statewiseTehsilSeccDataSummaryReport&quot;)">Chittoor</a>
+						
+		 		
+				
+			</td>
+				
+				
+		<td>1038696</td>
+		
+		<td>1</td>
+		
+		<td>66</td>
+		<td>1433</td>
+		<td>1513</td>
+		<td>8</td>
+		<td>798870</td>
+		<td>239826</td>
+		<td>76.91%</td>
+		<td>23.09%</td>
+	</tr>
+	
+</tbody>
+</table>	
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			
+
+			
+
+			
+
+			
+
+ 			 
+
+				
+				
+				
+				
+
+				
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	
+		</div>
+<!-- End Div container -->
+</form>
+
+
+						
+			
+		</div>
+		<!--footer-->
+		<div>
+			<style>
+a.colorwhite{
+ color:#FFFFFF;
+}
+			#navigation{
+				width:100%;
+				height:30px;
+				font-size:12px;
+				/*background:url(../images/foot.gif) repeat-x #84BF60;*/
+				background-color:#EAEAEA;
+				color:#00000;
+				text-align:center;
+				padding:1px 0 1px 0;
+				clear:both;
+			}
+			#navigation ul
+			{
+				margin:0px; padding:0px;
+			}
+			
+			#navigation li a
+			{
+				color:black; text-decoration:none; 
+			}	
+			#navigation li a:hover
+			{
+				color:#B80000; font-size: 12px;   /*text-decoration:underline; font-weight: bold;*/
+			}
+			#navigation li ul
+			{
+				display:none;
+				position:absolute;
+				text-align:left;
+				background-color:lightgreen;
+				list-style:none;
+				margin-left:25px;
+			}
+			#navigation li:hover ul
+			{
+				display:block;
+				width:440px;
+			}
+			#navigation li li
+			{
+				list-style:none;
+				display:block;
+				width:100%;
+			}
+			#navigation ul li
+			{
+				display:inline;
+				height:30px;
+				float:left;
+				list-style:none;
+				margin-left:25px;
+				position:relative;
+			}
+			#navigation li li a
+			{
+				color:black; text-decoration:none;text-align:left;
+			}
+			#navigation li li a:hover
+			{
+				text-decoration:underline;color:darkred;font-size: 15px;font-weight: bold;
+			}			
+		</style>
+	 
+
+		<script type="text/javascript">
+		function callfunction(actionName, divId)
+		{
+			document.getElementById("getDivId").value = divId;
+			document.forms["form1"].action =actionName;
+			document.forms["form1"].method ="POST";	
+			document.getElementById("form1").submit();
+			
+		}
+		</script>
+    <form name="form1" id="form1">
+    <div><br/></div>
+	<div>
+    <input type="hidden" name="getDivId" id="getDivId" value="" />
+	   <div id="navigation" style="margin: 0%;height: 140px;">
+		
+			<div id="navigation" style="margin: 0%;height: 40px;">
+				<ul style="margin-left: 500px;text-indent: 20px; padding-top: 5px;border-width: 1cm;" >
+					<li><a href="http://india.gov.in" target="_blank"><img src="./images/reportlist/indiagovin.gif.png" height="35px;" width="125px;"/></a></li>
+					<li><a href="http://rural.nic.in" target="_blank"><img src="./images/reportlist/ruralnicin.jpg" height="35px;" width="125px;"/></a></li>
+					<li><a href="http://secc.gov.in/state"  target="_blank"><img src="./images/reportlist/dl.jpg" height="35px;" width="125px;"/></a></li>
+<!-- 					<li><a href="http://secc.gov.in/stateFinalList"  target="_blank"><img src="./images/img/fl.jpg" height="35px;" width="125px;"/></a></li>
+ -->				</ul>
+				
+			</div>
+			<hr/>
+			 <div id="navigation" style="margin: 0%;">
+				<ul style="margin-left: 350px;text-indent: 10px; padding-top: 5px;border-width: 1cm;" >
+				 	<li><a href="faqReportlist" class="colorwhite">FAQ</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</li> 
+					<li><a href="#" onclick="callfunction('termsconditionsReport','1')" class="colorwhite">Terms &amp; Conditions</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</li>
+					<li><a href="#" onclick="callfunction('termsconditionsReport','2')">Copyright policy</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</li>
+					<li><a href="#" onclick="callfunction('termsconditionsReport','3')">Hyperlinking policy</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</li>
+					<li><a href="#" onclick="callfunction('termsconditionsReport','4')">Privacy policy</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</li>
+					<li><a href="#" onclick="callfunction('termsconditionsReport','5')">Sitemap</a> </li>
+				</ul>
+				
+			</div>
+			<hr/>
+			<ul style="margin-left: 400px; text-indent: 20px;">
+				<li>
+					Website designed &amp; maintained by <b> National Informatics Centre</b>, <br/>
+					Contents provided and maintained by <b>Department of Rural Development, Ministry of Rural Development, Government of India</b>
+				</li>
+			</ul>
+		</div>
+		</div>
+		
+		</form>
+
+		</div>
+	</div>
+</body>
+<script>
+$(document).ready(function() {
+	var varval= 'district'; 
+	if(varval=="state"){
+	    $("#graphLink").hide();
+	    $("#xlsTitle").show();
+		$("#graphData").show();
+	    $("#tabularLink").show();
+	}
+	if(varval=="district" || varval=="tehsil"){
+		$("#graphData").hide();
+	    $("#tabularLink").hide();
+	    $("#graphLink").hide();
+	    $("#tabularData").show();
+	}
+    $("#tabularLink").click(function(){
+        $("#graphData").hide();
+        $("#tabularLink").hide();
+        $("#graphLink").show();
+        $("#tabularData").slideDown(1000);
+	    $("#xlsTitle").show();
+    });
+
+    $("#graphLink").click(function(){
+        $("#graphLink").hide();
+        $("#tabularData").hide();
+    	$("#graphData").slideDown(1000);
+        $("#tabularLink").show();
+    });
+	var xlsFileName="SECC-"+$('#xlsTitle').text().trim();
+	$('#example').DataTable( {
+    	 dom: 'Bfrtip',
+    	 buttons: [{ extend: 'excelHtml5', text:'<i class="fa fa-file-excel-o text-green"></i> <b> Save Report</b>' ,title: xlsFileName },],
+         scrollY: '29vh',
+         scrollX: true,
+         "searching": false,
+         "ordering": false,
+         scrollCollapse: true,
+         paging: false,
+         bInfo: false
+    } );
+} );
+</script>
+</html>
